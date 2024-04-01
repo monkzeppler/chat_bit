@@ -30,16 +30,21 @@
             #messages .msg{
                 background: #729bdb;
                 margin: 10px;
-                padding: 20px 20px 10px 20px;
+                padding: 15px 20px 20px 20px;
                 width: fit-content;
                 border-radius: 10px;
                 color: #fff;
+                box-shadow: 3px 2px 1px #fff;
+            }
+
+            #messages .msg .msg_title{
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 4px;
             }
 
             #messages .msg span{
                 font-size: 12px;
-                text-align: right;
-                display: block;
                 color: #224e91;
                 font-weight: 100;
             }
@@ -52,16 +57,16 @@
                 border-top-right-radius: 20px;
                 display: flex;
                 position: relative;
-                align-items: end;
+                align-items: center;
             }
 
             #input-box > div {
-                width: 50px;
+                width: 60px;
                 padding: 10px;
             }
 
             #input-box textarea{
-                width: 100%;
+                width: calc(100% - 120px);
                 height: 100%;
                 resize: none;
                 border-radius: 3px;
@@ -77,14 +82,21 @@
         <div id="chat-box">
             <div id="messages">
                 <div class="msg">
+                    <div class="msg_title">
+                        <span>User name</span>
+                        <span>10:00</span>
+                    </div>
                     Hello World test message.
-                    <span>10:00</span>
                 </div>
             </div>
             <div id="input-box">
-                <div>UP</div>
+                <div>
+                    <img src="./plus-circle-svgrepo-com.svg">
+                </div>
                 <textarea></textarea>
-                <div>Send</div>
+                <div>
+                    <img src="./message-pending-svgrepo-com.svg">
+                </div>
             </div>
         </div>
 
