@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat</title>
+        <style>
+            * {box-sizing: border-box;}
+            html, body{height: 100%;}
+            body{
+                padding: 0;
+                margin: 0;
+                background: #4c5962;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 16px;
+            }
+
+            #chat-box{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #messages{
+                height: 100%;
+                overflow-x: hidden;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #messages .msg{
+                background: #729bdb;
+                margin: 10px;
+                padding: 20px 20px 10px 20px;
+                width: fit-content;
+                border-radius: 10px;
+                color: #fff;
+            }
+
+            #messages .msg span{
+                font-size: 12px;
+                text-align: right;
+                display: block;
+                color: #224e91;
+                font-weight: 100;
+            }
+
+            #input-box{
+                min-height: 80px;
+                background: #f7f7f7;
+                border-top: 4px solid #404040;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                display: flex;
+                position: relative;
+                align-items: end;
+            }
+
+            #input-box > div {
+                width: 50px;
+                padding: 10px;
+            }
+
+            #input-box textarea{
+                width: 100%;
+                height: 100%;
+                resize: none;
+                border-radius: 3px;
+                background: inherit;
+                border: none;
+                padding: 15px;
+                outline: none;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="chat-box">
+            <div id="messages">
+                <div class="msg">
+                    Hello World test message.
+                    <span>10:00</span>
+                </div>
+            </div>
+            <div id="input-box">
+                <div>UP</div>
+                <textarea></textarea>
+                <div>Send</div>
+            </div>
+        </div>
+
+
+    </body>
+</html>
